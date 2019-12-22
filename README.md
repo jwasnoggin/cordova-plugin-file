@@ -543,7 +543,7 @@ Here is a request for persistent storage.
 >*Note* When targeting WebView clients (instead of a browser) or native apps (Windows), you dont need to use `requestQuota` before using persistent storage.
 
 ```js
-window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fs) {
+window.requestFileSystem(window.PERSISTENT, 0, function (fs) {
 
     console.log('file system open: ' + fs.name);
     fs.root.getFile("newPersistentFile.txt", { create: true, exclusive: false }, function (fileEntry) {
